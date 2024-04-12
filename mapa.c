@@ -3,6 +3,18 @@
 #include "mapa.h"
 
 
+void encontramapa(Mapa* m, Posicao* p, char c) {
+    for (int i = 0; i < m->linhas; i++) {
+        for (int j = 0; j < m->colunas; j++) {
+            if (m->matriz[i][j] == '@') {
+                p->x = i;
+                p->y = j;
+                break;
+            }
+        }
+    }
+}
+
 void liberamapa(Mapa* m) {
     for (int i = 0; i < m->linhas; i++) {
         free(m->matriz[i]);

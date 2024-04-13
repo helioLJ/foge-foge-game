@@ -21,6 +21,8 @@ void fantasmas() {
             }
         }
     }
+
+    liberamapa(&copia);
 }
 
 int acabou() {

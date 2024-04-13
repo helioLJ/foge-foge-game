@@ -5,7 +5,7 @@
 void andanomapa(Mapa* m, int xorigem, int yorigem, int xdestino, int ydestino) {
     char personagem = m->matriz[xorigem][yorigem];
     m->matriz[xdestino][ydestino] = personagem;
-    m->matriz[xorigem][yorigem] = '.';
+    m->matriz[xorigem][yorigem] = VAZIO;
 }
 
 int ehvalida(Mapa* m, int x, int y) {
@@ -14,13 +14,13 @@ int ehvalida(Mapa* m, int x, int y) {
     return 1;
 }
 int ehvazia(Mapa* m, int x, int y) {
-    return m->matriz[x][y] == '.';
+    return m->matriz[x][y] == VAZIO;
 }
 
 void encontramapa(Mapa* m, Posicao* p, char c) {
     for (int i = 0; i < m->linhas; i++) {
         for (int j = 0; j < m->colunas; j++) {
-            if (m->matriz[i][j] == '@') {
+            if (m->matriz[i][j] == c) {
                 p->x = i;
                 p->y = j;
                 break;

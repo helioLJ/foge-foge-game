@@ -28,3 +28,4 @@ int ehvalida(Mapa* m, int x, int y);
 int ehvazia(Mapa* m, int x, int y);
 void andanomapa(Mapa* m, int xorigem, int yorigem, int xdestino, int ydestino);
 void copiamapa(Mapa* destino, Mapa* origem);
+int podeandar(Mapa* m, int x, int y);

@@ -41,6 +41,12 @@ void encontramapa(Mapa* m, Posicao* p, char c) {
     }
 }
 
+int podeandar(Mapa* m, int x, int y) {
+    if (!ehvalida(m, x, y)) return 0;
+    if (!ehvazia(m, x, y)) return 0;
+    return 1;
+}
+
 void liberamapa(Mapa* m) {
     for (int i = 0; i < m->linhas; i++) {
         free(m->matriz[i]);
